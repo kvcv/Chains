@@ -6,20 +6,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.documents import Document
-"""
-from langchain_community.document_loaders import DirectoryLoader
-pdf_loader = DirectoryLoader('/content/Documents/', glob="**/*.pdf")
-readme_loader = DirectoryLoader('/content/Documents/', glob="**/*.md")
-txt_loader = DirectoryLoader('/content/Documents/', glob="**/*.txt")
-     
 
-#take all the loader
-loaders = [pdf_loader, readme_loader, txt_loader]
-
-#lets create document 
-documents = []
-for loader in loaders:
-    documents.extend(loader.load())"""
 #Load all the .pdf files from docs directory
 pdf_file = open('Choosing an effective visual.pdf', 'rb')
 pdf_reader = PyPDF2.PdfReader(pdf_file)
